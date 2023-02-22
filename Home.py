@@ -17,7 +17,7 @@ def home():
         st.write("")
 
     with col2:
-        st.image("assets/logo_rounded.png")
+        st.image("assets/HEALTH.png")
 
     with col3:
         st.write("")
@@ -59,6 +59,17 @@ def home():
     st.markdown(
         f"⚕️ **Early Diabetes Detection** - Enter the patients attributes from the test report and check whether he/she have chances of diabetes or not"
     )
+
+    st.markdown(
+        f"⚕️ **Liver Disease Detection** - Enter the patients attributes from the test report and check whether he/she have chances of any type of liver disease or not"
+    )
+
+    st.markdown("---")
+
+    st.warning(
+        "**Disclaimer**: This is a testing site...Please consult a real doctor in case of symptoms"
+    )
+
 
 
 

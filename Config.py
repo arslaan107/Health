@@ -5,8 +5,10 @@ DATA_DIR = "data"
 
 TRAINED_MODEL_DIS = os.path.join(MODEL_DIR, "disease_pred.pkl")
 Diabetes_Model = os.path.join(MODEL_DIR,"diabetes.pkl")
+LIVER_MODEL = os.path.join(MODEL_DIR,"liver.pkl")
 DISEASE_DATA = os.path.join(DATA_DIR, "disease.json")
 PRECAUTIONS_DATA = os.path.join(DATA_DIR, "precautions.csv")
+
 
 DISEASE_DATA = os.path.join(DATA_DIR, "disease.json")
 PRECAUTIONS_DATA = os.path.join(DATA_DIR, "precautions.csv")
