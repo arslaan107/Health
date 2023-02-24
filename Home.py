@@ -30,6 +30,25 @@ def home():
     st.markdown("---")
 
     st.markdown(
+        '<p style="font-size:22px; text-align: center; color: white;font-size: 20px;">"Whenever a doctor cannot do good, he must be kept from doing harm" - Hippocrates</p>',
+        unsafe_allow_html=True,
+    )
+
+    st.markdown("---")
+
+    st.markdown(
+        f"<p style='text-align: center; color: white; font-size: 15px'>💠 The act of diagnosing a medical condition is extremely involved. When done right, the process is a complex blend of clinical evidence, data, probabilistic rationale and pattern matching, with the consequences of different courses of action kept in mind from a cost and patient care perspective. When done poorly, a range of tests will be performed (often without justification), and conclusions drawn on scant evidence.</p>",
+        unsafe_allow_html=True,
+    )
+
+    st.markdown(
+        f"<p style='text-align: center; color: white; font-size: 15px'>💠 Medical tests are designed to detect, diagnose or monitor disease in a patient, and take on many different formats, including clinical examinations, imaging, biopsies, genetic analysis, and blood tests. Beyond their cost and usability, the most important question for any test is its effectiveness. In other words, how good is a particular test at detecting, diagnosing or monitoring the condition in question?</p>",
+        unsafe_allow_html=True,
+    )
+
+    st.markdown("---")
+
+    st.markdown(
         f"<h2 style='text-align: center; color: yellow; background-color: purple;'>About the website</h2>",
         unsafe_allow_html=True,
     )
