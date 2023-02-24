@@ -3,6 +3,9 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 
+st.sidebar.info(
+        "**About**: Disease related graphs"
+    )
 
 st.markdown(
         '<p style="font-size:22px; text-align: center; color: gold;font-size: 25px;">Our World In Data</p>',
