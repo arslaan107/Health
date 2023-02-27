@@ -5,6 +5,7 @@ import bar_chart_race as bcr
 
 import pandas as pd
 import numpy as np
+import base64
 
 
 st.sidebar.info(
@@ -72,12 +73,23 @@ c = ['India','Pakistan','China','Bangladesh','Russia']
 
 select2 = st.selectbox("Select a country",c)
 
-st.write(select2)
+# st.markdown(
+#         '<p style="font-size:22px; text-align: center; color: white;font-size: 25px;">{select2}</p>',
+#         unsafe_allow_html=True,
+#     )
+html = f"""
+<style>
+p.a {{
+  font: bold 50px Courier;
+}}
+<p class="a">{select2}</p>
+"""
+st.markdown(html, unsafe_allow_html=True)
 
 df_coun = df.query("Country == @select2 ")
 
 #st.write(df_ind)
-st.dataframe(data = df_coun)
+#st.dataframe(data = df_coun)
 
 
 @st.cache_data
@@ -92,17 +104,41 @@ def data_change(d):
 
 x = data_change(df_coun)
 
-st.write("Preprocessed data")
+st.write("Table")
 
 st.dataframe(data = x)
 
 
+# components.html(
+#     bcr.bar_chart_race(
+#         df=x, title="Diseases", n_bars=10
+#     ).data
+# )
 
-components.html(
-    bcr.bar_chart_race(
-        df=x, title="Diseases", n_bars=10
-    ).data
-)
+st.write("CHART")
+
+@st.cache_data
+def chart(data):
+    html_str = bcr.bar_chart_race(df=data, title= f'{select2} DALY').data
+    start = html_str.find('base64,')+len('base64,')
+    end = html_str.find('">')
+    video = base64.b64decode(html_str[start:end])
+    
+    return video
+
+st.video(chart(x))
+
+
+
+
+
+    
+
+    
+
+
+
+
 
 
 
