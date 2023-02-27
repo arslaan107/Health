@@ -17,6 +17,12 @@ st.markdown(
         unsafe_allow_html=True,
     )
 
+st.markdown(
+        f"<h2 style='text-align: center; color: yellow; background-color: purple;'>Disability Adjusted Life Years (DALYs) lost is a standardized metric allowing for direct comparison and summing of burdens of different diseases. Conceptually, one DALY is the equivalent of one year in good health lost because of premature mortality or disability. Assessing health outcomes by both mortality and morbidity provides a more encompassing view on health outcomes than only looking at mortality or life expectancy alone.</h2>",
+        unsafe_allow_html=True,
+    )
+
+
 list = ['World-wide', 'test']
 
 select = st.selectbox("Select an option", list)
@@ -109,11 +115,11 @@ st.write("Table")
 st.dataframe(data = x)
 
 
-# components.html(
-#     bcr.bar_chart_race(
-#         df=x, title="Diseases", n_bars=10
-#     ).data
-# )
+components.html(
+    bcr.bar_chart_race(
+        df=x, title="Diseases", n_bars=10
+    ).data
+)
 
 st.write("CHART")
 
